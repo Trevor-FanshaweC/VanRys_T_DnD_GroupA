@@ -14,12 +14,11 @@ let theButtons = document.querySelectorAll("#buttonHolder img"),
 // functionality always goes in the middle -> how do we want
 // the app to behave?
 function changeBGImage() {
-	// debugger;
-	// start with the object, and then change a property
-	// or run a method
-	let theNewSource = "images/backGround" + this.id  + ".jpg";
-
-	console.log(theNewSource);
+	// the `` is a JavaScript template string. It tells the JS enging to evaluate the expression
+	// inside the braces - run that little bit of code. In this case it's just pulling the ID of the
+	// button we clicked on and putting it at the end of the image name (0, 1, 2, 3)
+	// and updating the background-image style of the puzzle board element.
+	puzzleBoard.style.backgroundImage = `url(images/backGround${this.id}.jpg)`;
 }
 // step 2
 // event handling always goes at the bottom => 
